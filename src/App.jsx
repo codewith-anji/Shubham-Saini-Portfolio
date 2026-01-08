@@ -1,35 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Navbar from "./Navbar";
+
+import Home from "./Navlinks/Home";
+import Projects from "./Navlinks/Projects";
+import About from "./Navlinks/About";
+import Skills from "./Navlinks/Skills";
+import Contact from "./Navlinks/Contact";
+import { motion } from "framer-motion";
+import Footer from "./Footer";
+import HomeArrow from "./Navlinks/HomeArrow";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <Navbar />
+
+     
+
+      <main>
+  <section
+    id="home">
+    <Home />
+</section>
+
+       <motion.section
+  initial={{ y: 80, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+>
+ <About/>
+</motion.section>
+
+         <motion.section
+         initial={{y:80,opacity:0}}
+         whileInView={{y:0,opacity:1}}
+         transition={{duration:0.8,ease:"easeOut"}}
+         viewport={{once:true}}
+          id="skills">
+          <Skills/>
+        </motion.section>
+
+
+         <motion.section
+          initial={{y:80, opacity:0}}
+          whileInView={{y:0,opacity:1}}
+          viewport={{once:true}}
+          transition={{duration:0.8,ease:"easeOut"}}
+         
+
+
+         id="projects">
+          <Projects/>
+        </motion.section>
+
+         <motion.section
+         initial={{y:80,opacity:0}}
+         whileInView={{y:0,opacity:1}}
+         transition={{duration:0.8,ease:"easeOut"}}
+         viewport={{once:true}}
+         id="contact">
+          <Contact/>
+        </motion.section>
+      </main>
+
+  
+
+     <HomeArrow/>
+      <Footer/>
+
+    </div>
+  );
 }
 
-export default App
+export default App;
