@@ -88,9 +88,9 @@ function Navbar() {
 
 
    <div className="flex items-center gap-3">
-          <p className="text-white text-sm sm:text-md bg-blue-500 px-2 py-1 rounded-lg shadow-sm shadow-white cursor-pointer active:scale-75">
+          <a href="/Shubham_Saini_Frontend_CV.pdf" download className="text-white text-sm sm:text-md bg-blue-500 px-2 py-1 rounded-lg shadow-sm shadow-white cursor-pointer active:scale-75">
             Download CV
-          </p>
+          </a>
           {
             <FaBars onClick={MobileNav} className="lg:hidden text-white text-2xl sm:text-3xl active:scale-75 cursor-pointer   " />
           }
