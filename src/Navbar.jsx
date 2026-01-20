@@ -74,7 +74,7 @@ function Navbar() {
         </div>
 
 <div>
-   <div className={`  w-full bg-[#222] absolute top-12 left-0  z-10  flex-col  p-2 gap-8  ${popUp?"flex ":"hidden "}   `}>
+   <div className={`w-full bg-[#222] flex absolute top-12 sm:top-19.5 left-0  z-10  flex-col  p-2 gap-8  lg:hidden   `}>
       {NavLinks.map((ele,i)=>{
         return(
          <div key={i} onClick={()=>NavBarScroll(ele.id)} className ="cursor-pointer text-gray-300 font-medium flex justify-between items-center text-lg">

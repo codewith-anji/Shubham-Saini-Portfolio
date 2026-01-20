@@ -15,60 +15,54 @@ function App() {
     <div>
       <Navbar />
 
-     
-
       <main>
-  <section
-    id="home">
-    <Home />
-</section>
+        <section id="home">
+          <Home />
+        </section>
 
-       <motion.section
-  initial={{ y: 80, opacity: 0 }}
-  whileInView={{ y: 0, opacity: 1 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: true }}
->
- <About/>
-</motion.section>
-
-         <motion.section
-         initial={{y:80,opacity:0}}
-         whileInView={{y:0,opacity:1}}
-         transition={{duration:0.8,ease:"easeOut"}}
-         viewport={{once:true}}
-          id="skills">
-          <Skills/>
+        <motion.section
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          id="about"
+        >
+          <About />
         </motion.section>
 
-
-         <motion.section
-          initial={{y:80, opacity:0}}
-          whileInView={{y:0,opacity:1}}
-          viewport={{once:true}}
-          transition={{duration:0.8,ease:"easeOut"}}
-         
-
-
-         id="projects">
-          <Projects/>
+        <motion.section
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          id="skills"
+        >
+          <Skills />
         </motion.section>
 
-         <motion.section
-         initial={{y:80,opacity:0}}
-         whileInView={{y:0,opacity:1}}
-         transition={{duration:0.8,ease:"easeOut"}}
-         viewport={{once:true}}
-         id="contact">
-          <Contact/>
+        <motion.section
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          id="projects"
+        >
+          <Projects />
+        </motion.section>
+
+        <motion.section
+          initial={{ y: 80, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          id="contact"
+        >
+          <Contact />
         </motion.section>
       </main>
 
-  
-
-     <HomeArrow/>
-      <Footer/>
-
+      <HomeArrow />
+      <Footer />
     </div>
   );
 }
