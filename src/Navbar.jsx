@@ -25,12 +25,6 @@ const NavLinks = [
     id: "contact",
   },
 ];
-
-
-
-
-
-
 function Navbar() {
   let [popUp , setPopUp] = useState(false)
 
@@ -38,12 +32,12 @@ function Navbar() {
        document.getElementById(id).scrollIntoView({
         behavior:"smooth"
        })
-      setPopUp(prev => !prev)
+      setPopUp(false)
    }
 
 
    function MobileNav(){
-     setPopUp(prev => !prev)
+     setPopUp((prev) => !prev)
    }
 
   return (
@@ -75,7 +69,7 @@ function Navbar() {
 
 <div>
    <div className={`w-full bg-[#222] flex absolute top-12 sm:top-19.5 left-0  z-10  flex-col  p-2 gap-8  lg:hidden   `}>
-      {NavLinks.map((ele,i)=>{
+      {popUp && NavLinks.map((ele,i)=>{
         return(
          <div key={i} onClick={()=>NavBarScroll(ele.id)} className ="cursor-pointer text-gray-300 font-medium flex justify-between items-center text-lg">
             <p>{ele.LinkName}</p>
@@ -92,7 +86,7 @@ function Navbar() {
             Download CV
           </a>
           {
-            <FaBars onClick={MobileNav} className="lg:hidden text-white text-2xl sm:text-3xl active:scale-75 cursor-pointer   " />
+            <FaBars onClick={MobileNav} className="lg:hidden text-white text-2xl sm:text-3xl active:scale-75 cursor-pointer" />
           }
         </div>
       </div>
